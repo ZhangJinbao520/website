@@ -220,7 +220,7 @@ This feature can be enabled using the following steps:
   * 如果 kube-proxy 运行在 IPVS 模式：
 
     ``` bash
-    sed -i "s/__PILLAR__LOCAL__DNS__/$localdns/g; s/__PILLAR__DNS__DOMAIN__/$domain/g; s/,__PILLAR__DNS__SERVER__//g; s/__PILLAR__CLUSTER__DNS__/$kubedns/g" nodelocaldns.yaml
+    sed -i "s/__PILLAR__LOCAL__DNS__/$localdns/g; s/__PILLAR__DNS__DOMAIN__/$domain/g; s/__PILLAR__DNS__SERVER__//g; s/__PILLAR__CLUSTER__DNS__/$kubedns/g" nodelocaldns.yaml
     ```
 
     在此模式下，node-local-dns Pods 只会侦听 `<node-local-address>` 的地址。
